@@ -1,0 +1,23 @@
+.full {
+  background: #ff690f;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.full:hover {
+  background: #d35a0f;
+  transition: 0.3s linear;
+}
+.empty {
+  background: rgb(244, 212, 189);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 20px;
+  color: rgb(255, 123, 0);
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,77 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  font-weight: 600;
+  color: #000000;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper a img {
+  width: 350px;
+  height: 65px;
+  margin-left: -40px;
+}
+.call {
+  margin-left: 40px;
+}
+.call a {
+  text-decoration: none;
+  color: #000000;
+}
+.call p {
+  color: #999999;
+}
+.comein {
+  width: 70px;
+  height: 32px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: #999999;
+}
+.comein:hover {
+  color: #000000;
+}
+.btncoin:hover {
+  color: #ff6900;
+  cursor: pointer;
+}
+.coins {
+  display: flex;
+  justify-content: center;
+  column-gap: 35px;
+  align-items: center;
+}
+.btncoin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.btncoin img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  margin-top: -20px;
+}
+.btncoin img:hover {
+  margin-top: -25px;
+  transition: 0.2s linear;
+}
+.delivery {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.delivery p {
+  display: flex;
+  align-items: center;
+}
+.delivery p img {
+  width: 16px;
+  height: 16px;
+}

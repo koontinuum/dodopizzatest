@@ -1,0 +1,27 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 600;
+  color: #000000;
+}
+.underHeader {
+  font-size: small;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.underHeader a {
+  text-decoration: none;
+  color: #000000;
+  transition: 0.2s linear;
+}
+.underHeader a:hover {
+  color: #ff6900;
+}
+.underHeader a img {
+  width: 9px;
+  height: 9px;
+}
