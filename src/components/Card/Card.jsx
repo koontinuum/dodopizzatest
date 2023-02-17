@@ -1,13 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import css from "./Card.module.css";
+import Button from "../Button/Button";
 
-function Card() {
+function Card(props) {
   return (
-    <div>
-      <img
-        src="https://dodopizza-a.akamaihd.net/static/Img/Products/c940c5751e6d420e997d86c26a8ba16f_292x292.webp"
-        alt=""
-      />
+    <div to className={css.wrapper}>
+      <div className={css.imageWrapper}>
+        <img src={props.image} alt="" />
+      </div>
+      <div className={css.title}>{props.title}</div>
+      <p className={css.description}>{props.description}</p>
+      <div className={css.footer}>
+        <div>{props.price}</div>
+        <Button variant="empty" title="Выбрать" />
+      </div>
     </div>
   );
 }
