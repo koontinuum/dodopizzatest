@@ -1,0 +1,19 @@
+.getPizza {
+  width: calc(10% - 30px);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  position: fixed;
+  left: 90%;
+  top: 80vh;
+}
+.getPizza img {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+}

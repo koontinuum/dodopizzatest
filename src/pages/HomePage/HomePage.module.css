@@ -3,3 +3,9 @@
   flex-wrap: wrap;
   margin: 15px 0px 35px 0px;
 }
+.underSliders {
+  justify-content: space-between;
+  width: 175vh;
+  display: flex;
+  margin-top: 30px;
+}

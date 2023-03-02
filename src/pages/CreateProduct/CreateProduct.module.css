@@ -1,0 +1,64 @@
+.createProductmenu {
+  padding: 0px 450px;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.createProductmenu input {
+  text-align: center;
+  border-radius: 5px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #ff690f;
+  color: #ffffff;
+}
+.createProductmenu input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.createProductmenu textarea {
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background: #ff690f;
+  position: relative;
+}
+.createProductmenu textarea::placeholder {
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-45%, 50%);
+}
+.getPizza {
+  width: calc(10% - 30px);
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  position: fixed;
+  left: 90%;
+  top: 80vh;
+}
+.getPizza img {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+.createProductmenu select {
+  text-align: center;
+  height: 40px;
+  background: #ff690f;
+  border: none;
+  outline: none;
+  color: #ffffff;
+}

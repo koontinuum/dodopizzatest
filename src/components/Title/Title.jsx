@@ -3,7 +3,10 @@ import css from "./Title.module.css";
 
 function Title(props) {
   return (
-    <div className={css.title} style={{ textAlign: props.position }}>
+    <div
+      className={css.title}
+      style={{ textAlign: props.position, color: props.color }}
+    >
       {props.title}
     </div>
   );
