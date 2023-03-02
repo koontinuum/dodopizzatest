@@ -2,8 +2,17 @@ import React from "react";
 import css from "./Card.module.css";
 import Button from "../Button/Button";
 import Api from "../../api/Api";
+import { useDispatch, useSelector } from "react-redux";
+import { incremented } from "../../slices/MainSlice";
 
 function Card({ image, id, title, description, price, isAdmin = false }) {
+  const value = useSelector((state) => state.main.value);
+  const dispatch = useDispatch();
+
+  const addToCart = () => {
+    dispatch(incremented());
+  };
+  console.log(value);
   const deletePizza = () => {
     const res = window.confirm(
       "Вы действительно хотите удалить " + title + "?"
@@ -22,11 +31,11 @@ function Card({ image, id, title, description, price, isAdmin = false }) {
       <div className={css.title}>{title}</div>
       <p className={css.description}>{description}</p>
       <div className={css.footer}>
-        <div>{price}</div>
+        <div>{value}</div>
         {isAdmin ? (
           <Button onClick={deletePizza} variant="empty" title="Удалить" />
         ) : (
-          <Button variant="empty" title="В корзину" />
+          <Button onClick={addToCart} variant="empty" title="В корзину" />
         )}
       </div>
     </div>

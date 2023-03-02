@@ -1,7 +1,6 @@
 import React from "react";
 import css from "./Header.module.css";
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
 import mainlogo from "../../assets/dodopizzamainlogo.svg";
 import coinicon from "../../assets/coinicon.png";
 import gradestar from "../../assets/gradestar.png";

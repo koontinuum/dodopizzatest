@@ -7,11 +7,12 @@ const AuthSlice = createSlice({
         isAuth: a,
     },
     reducers: {
-        incremented: (state) => {
-            state.value += 1
-        },
+        login: (state) => {
+            state.isAuth = true
+        }
     },
-});
+},
+);
 
 export const { incremented } = AuthSlice.actions
 export const AuthSliceReducer = AuthSlice.reducer

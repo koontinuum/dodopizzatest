@@ -32,10 +32,7 @@ function Drinks({ image, id, title, description, price, isAdmin = false }) {
       <div className={css.title}>{title}</div>
       <p className={css.description}>{description}</p>
       <div className={css.footer}>
-        <div>
-          {price}
-          {value}
-        </div>
+        <div>{value}</div>
         {isAdmin ? (
           <Button onClick={deleteDrinks} variant="empty" title="Удалить" />
         ) : (
