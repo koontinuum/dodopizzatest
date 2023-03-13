@@ -5,7 +5,12 @@ function Title(props) {
   return (
     <div
       className={css.title}
-      style={{ textAlign: props.position, color: props.color }}
+      style={{
+        textAlign: props.position,
+        color: props.color,
+        fontSize: props.size,
+        margin: props.margin,
+      }}
     >
       {props.title}
     </div>

@@ -33,6 +33,12 @@ function CreateProduct() {
       <form onSubmit={submit} className={css.createProductmenu}>
         <Title title="Добавить пиццу" position="center" color="#ff690f" />
         <input
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+          type="text"
+          placeholder="Фото"
+        />
+        <input
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
@@ -40,10 +46,12 @@ function CreateProduct() {
           id=""
           placeholder="Название"
         />
-        <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value={"pizza"}>Пицца</option>
-          <option value={"drink"}>Напитки</option>
-        </select>
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          className="input"
+          placeholder="Описание"
+        />
         <input
           value={price}
           onChange={(e) => setPrice(e.target.value)}
@@ -52,18 +60,10 @@ function CreateProduct() {
           id=""
           placeholder="Цена"
         />
-        <input
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          type="text"
-          placeholder="Фото"
-        />
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          className="input"
-          placeholder="Описание"
-        />
+        <select value={type} onChange={(e) => setType(e.target.value)}>
+          <option value={"pizza"}>Пицца</option>
+          <option value={"drink"}>Напитки</option>
+        </select>
         <Button
           disabled={isSending}
           type="sumbit"

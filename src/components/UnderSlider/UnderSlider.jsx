@@ -2,13 +2,13 @@ import React from "react";
 import css from "./UnderSlider.module.css";
 import pizzaSlide from "../../assets/pizza.webp";
 
-function UnderSlider() {
+function UnderSlider({ img, name, pay }) {
   return (
     <div className={css.underSlide}>
-      <img src={pizzaSlide} alt="" />
+      <img src={img} alt="" />
       <div className={css.underSale}>
-        <h1>Пеперони</h1>
-        <h1>от 445 сом</h1>
+        <h1>{name}</h1>
+        <h2>{pay}</h2>
       </div>
     </div>
   );

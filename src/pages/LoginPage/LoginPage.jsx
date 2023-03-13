@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import css from "./LoginPage.module.css";
+import { login as loginRedux } from "../../slices/AuthSlice";
+import { useDispatch } from "react-redux";
 
-function LoginPage({ setAuth }) {
+function LoginPage() {
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const submit = (e) => {
     e.preventDefault();
     if (login === "admin" && password === "admin") {
-      setAuth(true);
-      // navigate("/admin");
+      dispatch(loginRedux());
     }
   };
   return (

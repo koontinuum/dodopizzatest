@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import css from "./SliderCard.module.css";
+
 import card1 from "../../assets/SliderCards/card1.jpg";
 import card2 from "../../assets/SliderCards/card2.jpg";
 import card3 from "../../assets/SliderCards/card3.jpg";
@@ -13,6 +14,7 @@ import card7 from "../../assets/SliderCards/card7.jpg";
 import card8 from "../../assets/SliderCards/card8.jpg";
 import card9 from "../../assets/SliderCards/card9.jpg";
 import card10 from "../../assets/SliderCards/card10.jpg";
+import testicon from "../../assets/slider.svg";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -21,11 +23,11 @@ function SampleNextArrow(props) {
       className={className}
       style={{
         ...style,
-        display: "block",
-        color: "#ff690f",
       }}
       onClick={onClick}
-    />
+    >
+      <img className={css.nextArrow} src={testicon} alt="" />
+    </div>
   );
 }
 
@@ -34,9 +36,13 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", color: "#ff690f" }}
+      style={{
+        ...style,
+      }}
       onClick={onClick}
-    />
+    >
+      <img className={css.prevArrow} src={testicon} alt="" />
+    </div>
   );
 }
 
@@ -49,6 +55,32 @@ export default class CustomArrows extends Component {
       slidesToScroll: 6,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            initialSlide: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     };
     return (
       <div>

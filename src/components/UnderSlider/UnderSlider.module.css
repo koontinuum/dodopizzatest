@@ -19,6 +19,12 @@
 .underSale {
   font-size: 8px;
 }
+.underSale h1 {
+  margin-bottom: 10px;
+}
+.underSale h2 {
+  font-size: 17px;
+}
 .underSlide:hover {
   box-shadow: 0px -5px 10px 0px rgba(255, 255, 255, 0);
   box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, 0);

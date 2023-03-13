@@ -5,7 +5,15 @@ import Api from "../../api/Api";
 import { useDispatch, useSelector } from "react-redux";
 import { incremented } from "../../slices/MainSlice";
 
-function Drinks({ image, id, title, description, price, isAdmin = false }) {
+function Drinks({
+  image,
+  id,
+  title,
+  name,
+  description,
+  price,
+  isAdmin = false,
+}) {
   const value = useSelector((state) => state.main.value);
 
   const dispatch = useDispatch();
@@ -29,10 +37,10 @@ function Drinks({ image, id, title, description, price, isAdmin = false }) {
       <div className={css.imageWrapper}>
         <img src={image} alt={title} />
       </div>
-      <div className={css.title}>{title}</div>
+      <div className={css.title}>{name}</div>
       <p className={css.description}>{description}</p>
       <div className={css.footer}>
-        <div>{value}</div>
+        <div>{price}</div>
         {isAdmin ? (
           <Button onClick={deleteDrinks} variant="empty" title="Удалить" />
         ) : (

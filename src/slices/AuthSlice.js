@@ -9,10 +9,13 @@ const AuthSlice = createSlice({
     reducers: {
         login: (state) => {
             state.isAuth = true
+        },
+        logout: (state) => {
+            state.isAuth = false
         }
     },
 },
 );
 
-export const { incremented } = AuthSlice.actions
+export const { login, logout } = AuthSlice.actions
 export const AuthSliceReducer = AuthSlice.reducer

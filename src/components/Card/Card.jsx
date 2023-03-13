@@ -5,7 +5,7 @@ import Api from "../../api/Api";
 import { useDispatch, useSelector } from "react-redux";
 import { incremented } from "../../slices/MainSlice";
 
-function Card({ image, id, title, description, price, isAdmin = false }) {
+function Card({ image, id, name, title, description, price, isAdmin = false }) {
   const value = useSelector((state) => state.main.value);
   const dispatch = useDispatch();
 
@@ -26,12 +26,17 @@ function Card({ image, id, title, description, price, isAdmin = false }) {
   return (
     <div to className={css.wrapper}>
       <div className={css.imageWrapper}>
-        <img src={image} alt={title} />
+        <div>
+          <img src={image} alt={title} />
+        </div>
       </div>
-      <div className={css.title}>{title}</div>
+      <div className={css.title}>{name}</div>
       <p className={css.description}>{description}</p>
       <div className={css.footer}>
-        <div>{value}</div>
+        <div>
+          {price}
+          {value}
+        </div>
         {isAdmin ? (
           <Button onClick={deletePizza} variant="empty" title="Удалить" />
         ) : (

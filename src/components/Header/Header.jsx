@@ -28,7 +28,9 @@ function Header() {
           <img src={coinicon} alt="" />
           <h4>Додокоины</h4>
         </div>
-        <button className={css.comein}>Войти</button>
+        <Link to="/login">
+          <button className={css.comein}>Войти</button>
+        </Link>
       </div>
       {/* <Button title="Корзина" /> */}
     </div>
